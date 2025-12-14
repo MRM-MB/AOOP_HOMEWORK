@@ -16,7 +16,7 @@ The purpose of this assignment is to develop a **fully functional data visualiza
 
 Below is the initial **UI sketch/mock-up** designed for the application. It helped in planning the layout and user experience before development.
 
-![UI Mock-up](/HW_3/DataVizApp/Assets/Readme1.png)
+![UI Mock-up](../Screenshots/Readme1.png)
 
 ## 🎯 Features Implemented
 
@@ -32,7 +32,7 @@ Below is the initial **UI sketch/mock-up** designed for the application. It help
 
 ## 👥 Contributors & Roles
 
-### **Manish Raj Moriche** & **Luigi Colluto**
+### **Manish Raj Moriche** & **[Luigi Colluto](https://github.com/Lucol24)**
 
 Both team members contributed to the overall application architecture, UI design, debugging and the creation of **Top Artists by Listeners** graph preset query.
 
@@ -43,7 +43,7 @@ Both team members contributed to the overall application architecture, UI design
 - Handled **file I/O operations** and CSV dataset parsing.
 - Developed the **extra functionality** for **resizable charts**.
 
-### **Luigi Colluto**
+### **[Luigi Colluto](https://github.com/Lucol24)**
 
 - Implemented the **"Most Popular Subscription Type"** and **"Minutes Streamed per Day by Age"** charts.
 - Developed the **UI components** using Avalonia and customized themes.

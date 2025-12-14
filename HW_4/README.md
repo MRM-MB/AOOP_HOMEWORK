@@ -4,6 +4,8 @@
 
 This project simulates a **restaurant kitchen** where multiple recipes are prepared concurrently, visualized with real-time animated feedback. The goal was to apply concepts of **multithreading**, **JSON parsing**, and **UI animations** using **Avalonia UI** in a modular and scalable way.
 
+![App Screenshot](../Screenshots/app_screenshot.png)
+
 The simulator takes a set of recipes from a JSON file and simulates their preparation across multiple kitchen stations, where each recipe is processed step-by-step following specific durations. Each step is visualized in the UI using animated progress bars and dynamic updates.
 
 ## 🍽️ Key Objectives Achieved
@@ -49,7 +51,7 @@ The simulator takes a set of recipes from a JSON file and simulates their prepar
 
 ## 👥 Contributors & Roles
 
-### **Manish Raj Moriche** & **Luigi Colluto**
+### **Manish Raj Moriche** & **[Luigi Colluto](https://github.com/Lucol24)**
 
 Both members collaborated closely on the design, architecture, and testing of the project, splitting responsibilities equally.
 
@@ -59,7 +61,7 @@ Both members collaborated closely on the design, architecture, and testing of th
 - Designed and handled **thread synchronization mechanisms**.
 - Built the **progress tracking logic** and integrated it with the ViewModels.
 
-### **Luigi Colluto**
+### **[Luigi Colluto](https://github.com/Lucol24)**
 - Designed the **UI** using Avalonia XAML and animations.
 - Created the **MVVM ViewModels** (`MainWindowViewModel`, `RecipeViewModel`).
 - Implemented **data binding**, user controls (Start, Pause), and responsiveness logic.

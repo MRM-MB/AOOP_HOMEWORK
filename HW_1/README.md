@@ -4,6 +4,8 @@
 We have included a sample file, `panda.txt`, in `/ImageEditorApp` for you to test the program.
 You can also upload a custom `.b2img.txt` file to check how the application processes different inputs.
 
+![App Screenshot](../Screenshots/app_screenshot.png)
+
 ## 📌 Assignment Overview
 
 This assignment involves creating an application that reads `.b2img.txt` files, loads them into memory, displays and modifies the values using a graphical user interface, and writes the modified data to an output file. The application was developed using the Avalonia framework to handle the GUI.
@@ -19,11 +21,11 @@ This assignment involves creating an application that reads `.b2img.txt` files, 
 
 ## 👥 Contributors & Roles
 
-### **Manish Raj Moriche** & **Luigi Colluto**
+### **Manish Raj Moriche** & **[Luigi Colluto](https://github.com/Lucol24)**
 
 The coding was done in a peer-to-peer manner, alternating between the two contributors for error-checking and improvements. Specific contributions include:
 
-### **Luigi Colluto**
+### **[Luigi Colluto](https://github.com/Lucol24)**
 
 - Focused on the **presentation** of the application.
 - Developed most of the **GUI and visual aspects**.

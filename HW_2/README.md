@@ -3,7 +3,7 @@
 **⚠️ Note for the Professor:**
 We have included a sample file, `Accounts.txt`, in `/UniversityManagementApp` for you to test the program. You can log in using premade accounts from this file or create a new user using the "Sign Up" feature to explore the application.
 
-![LOG-IN_UI](/HW_2/UniversityManagementApp/Assets/README_1.png)
+![LOG-IN_UI](../Screenshots/README_1.png)
 
 ## 📌 Assignment Overview
 
@@ -27,7 +27,7 @@ This assignment involves creating an application that manages university-related
 
 ## 👥 Contributors & Roles
 
-### **Manish Raj Moriche** & **Luigi Colluto**
+### **Manish Raj Moriche** & **[Luigi Colluto](https://github.com/Lucol24)**
 
 The coding was done collaboratively, with both contributors alternating roles for error-checking and improvements. Specific contributions include:
 
@@ -38,7 +38,7 @@ The coding was done collaboratively, with both contributors alternating roles fo
 - Created the **Student and Teacher models** and set up files for **ViewModels and Views**.
 - Designed and implemented the **UI presentation Log In**.
 
-### **Luigi Colluto**
+### **[Luigi Colluto](https://github.com/Lucol24)**
 
 - Developed the **sign-up functionality** and implemented **password hashing**.
 - Worked on **assigning subjects** to teachers and students, as well as their **creation and deletion**.
