@@ -4,7 +4,7 @@
 
 This project simulates a **restaurant kitchen** where multiple recipes are prepared concurrently, visualized with real-time animated feedback. The goal was to apply concepts of **multithreading**, **JSON parsing**, and **UI animations** using **Avalonia UI** in a modular and scalable way.
 
-![App Screenshot](../Screenshots/app_screenshot.png)
+![App Screenshot](./Screenshots/app_screenshot.png)
 
 The simulator takes a set of recipes from a JSON file and simulates their preparation across multiple kitchen stations, where each recipe is processed step-by-step following specific durations. Each step is visualized in the UI using animated progress bars and dynamic updates.
 

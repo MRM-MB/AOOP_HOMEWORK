@@ -4,7 +4,7 @@
 We have included a sample file, `panda.txt`, in `/ImageEditorApp` for you to test the program.
 You can also upload a custom `.b2img.txt` file to check how the application processes different inputs.
 
-![App Screenshot](../Screenshots/app_screenshot.png)
+![App Screenshot](./Screenshots/app_screenshot.png)
 
 ## 📌 Assignment Overview
 
