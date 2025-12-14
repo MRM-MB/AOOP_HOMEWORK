@@ -1,0 +1,193 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:UniversityManagementApp.ViewModels"
+        x:Class="UniversityManagementApp.Views.StudentDashboard"
+        x:DataType="vm:StudentDashboardViewModel"
+        Title="Student Dashboard"
+        Icon="/Assets/Logo.png"
+        Width="800"
+        Height="700">
+
+    <TabControl SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}">
+        <!-- Home Page -->
+        <TabItem Header="🏠 HomePage" VerticalContentAlignment="Center">
+            <StackPanel Margin="10">
+                <Border Margin="10" Padding="10" Background="LightBlue" CornerRadius="15">
+                    <TextBlock Name="StudentNameText" 
+                             FontSize="30" 
+                             FontWeight="Bold" 
+                             Foreground="Black" 
+                             HorizontalAlignment="Center"
+                             Text="Welcome to the University Management App! 🎓" />
+                </Border>
+                
+                <TextBlock FontSize="24" FontStyle="Italic" Margin="5,10,5,1" Text="Dear Student," />
+                <TextBlock FontSize="18" TextWrapping="Wrap" Margin="5,3,5,5"
+                           Text="Welcome to your student dashboard! Here you can manage your academic journey with ease." />
+
+                <Separator Margin="0,10"/>
+
+                <TextBlock FontSize="22" FontWeight="Bold" Margin="5,5,5,3" Text="Navigation Guide:" />
+                <TextBlock FontSize="18" Margin="5,0,5,1" TextWrapping="Wrap"
+                           Text="- 🏠 Home: Current page - your main dashboard overview" />
+                <TextBlock FontSize="18" Margin="5,0,5,1" TextWrapping="Wrap"
+                           Text="- 📚 Available Subjects: Browse and enroll in new courses" />
+                <TextBlock FontSize="18" Margin="5,0,5,1" TextWrapping="Wrap"
+                           Text="- ✅ Enrolled Subjects: View and manage your current courses" />
+
+                <Separator Margin="0,10"/>
+                
+                <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="5,10,5,5"
+                           Text="Stay organized and enjoy your academic journey! 🚀" />
+            </StackPanel>
+        </TabItem>
+
+        <!-- Available Subjects Page -->
+        <TabItem Header="📚 Available Subjects">
+            <StackPanel Margin="10">
+                <TextBlock FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"
+                           Text="Available Subjects" Margin="0,10,0,5"/>
+                <Separator Margin="10"/>
+                <TextBlock FontSize="18" TextWrapping="Wrap" Margin="10"
+                           Text="Explore available courses and enroll in subjects that interest you." />
+
+                <Grid ColumnDefinitions="2*, 3*" RowDefinitions="Auto, *" Margin="10">
+                    <!-- Available Subjects List -->
+                    <Border Grid.Column="0" BorderThickness="2" BorderBrush="DarkBlue" CornerRadius="10"
+                            Margin="0,0,5,0" Padding="5" Background="AliceBlue">
+                        <StackPanel>
+                            <TextBlock Text="Available Courses:" FontWeight="Bold" Margin="5"/>
+                            <ListBox ItemsSource="{Binding AvailableSubjects}"
+                                    SelectedItem="{Binding SelectedSubject}"
+                                    Height="300">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}" 
+                                                     FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding TeacherName}" 
+                                                     FontStyle="Italic"
+                                                     FontSize="12"
+                                                     Foreground="DarkBlue"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Selected Subject Description -->
+                    <Border Grid.Column="1" BorderThickness="2" BorderBrush="DarkGray" CornerRadius="10"
+                            Margin="5,0,0,0" Padding="10" Background="White">
+                        <StackPanel>
+                            <TextBlock Text="Course Details:" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding SelectedDescription}" 
+                                     FontSize="16"
+                                     TextWrapping="Wrap"
+                                     Height="300"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Enroll Button -->
+                    <Border Grid.Row="1" Grid.ColumnSpan="2" 
+                           BorderThickness="2" 
+                           BorderBrush="ForestGreen" 
+                           CornerRadius="10"
+                           Margin="0,10,0,0" 
+                           Padding="10" 
+                           Background="Honeydew">
+                        <StackPanel>
+                            <Button Content="📝 Enroll in Selected Course"
+                                    Command="{Binding EnrollCommand}"
+                                    IsEnabled="{Binding CanEnroll}"
+                                    HorizontalAlignment="Center"
+                                    Padding="20,10"
+                                    FontSize="18"
+                                    Background="ForestGreen"
+                                    Foreground="White"/>
+                            <TextBlock Text="{Binding ConfirmationMessage}" 
+                                     Foreground="DarkGreen" 
+                                     FontWeight="Bold"
+                                     HorizontalAlignment="Center" 
+                                     Margin="5"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
+        </TabItem>
+
+        <!-- Enrolled Subjects -->
+        <TabItem Header="✅ Enrolled Subjects">
+            <StackPanel Margin="10">
+                <TextBlock FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"
+                           Text="Your Enrolled Subjects" Margin="0,10,0,5"/>
+                <Separator Margin="10"/>
+                <TextBlock FontSize="18" TextWrapping="Wrap" Margin="10"
+                           Text="Manage your current course enrollments here." />
+
+                <Grid ColumnDefinitions="2*, 3*" RowDefinitions="Auto, *" Margin="10">
+                    <!-- Enrolled Subjects List -->
+                    <Border Grid.Column="0" BorderThickness="2" BorderBrush="RoyalBlue" CornerRadius="10"
+                            Margin="0,0,5,0" Padding="5" Background="AliceBlue">
+                        <StackPanel>
+                            <TextBlock Text="Your Current Courses:" FontWeight="Bold" Margin="5"/>
+                            <ListBox ItemsSource="{Binding EnrolledSubjects}"
+                                    SelectedItem="{Binding SelectedSubject}"
+                                    Height="300">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}" 
+                                                     FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding TeacherName}" 
+                                                     FontStyle="Italic"
+                                                     FontSize="12"
+                                                     Foreground="DarkBlue"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Selected Subject Description -->
+                    <Border Grid.Column="1" BorderThickness="2" BorderBrush="DarkGray" CornerRadius="10"
+                            Margin="5,0,0,0" Padding="10" Background="White">
+                        <StackPanel>
+                            <TextBlock Text="Course Details:" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding SelectedDescription}" 
+                                     FontSize="16"
+                                     TextWrapping="Wrap"
+                                     Height="300"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Unenroll Button -->
+                    <Border Grid.Row="1" Grid.ColumnSpan="2" 
+                           BorderThickness="2" 
+                           BorderBrush="Crimson" 
+                           CornerRadius="10"
+                           Margin="0,10,0,0" 
+                           Padding="10" 
+                           Background="MistyRose">
+                        <StackPanel>
+                            <Button Content="❌ Unenroll from Selected Course"
+                                    Command="{Binding UnenrollCommand}"
+                                    IsEnabled="{Binding CanUnenroll}"
+                                    HorizontalAlignment="Center"
+                                    Padding="20,10"
+                                    FontSize="18"
+                                    Background="Crimson"
+                                    Foreground="White"/>
+                            <TextBlock Text="{Binding ConfirmationMessage}" 
+                                     Foreground="Crimson" 
+                                     FontWeight="Bold"
+                                     HorizontalAlignment="Center" 
+                                     Margin="5"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>

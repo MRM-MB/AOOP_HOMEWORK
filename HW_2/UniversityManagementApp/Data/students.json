@@ -1,0 +1,45 @@
+[
+  {
+    "Id": 1,
+    "Name": "John Doe",
+    "Username": "JoDoe",
+    "Password": "$2a$11$m6HvAhPWBQNr7kLau4RZJe2J0FPdQjouurR/IeyiZ4Ak7TaCS8c4S",
+    "EnrolledSubjects": [
+      2,
+      4,
+      1
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Mike Smith",
+    "Username": "MiSmi",
+    "Password": "$2a$11$yj2/Xh8rEucp3gtvwQa7EOGxljDBObMJhQIZ4SURZVyYeoFicq30e",
+    "EnrolledSubjects": [
+      1,
+      4,
+      9
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Linda Johnson",
+    "Username": "LiJoh",
+    "Password": "$2a$11$ySD4.HQzM2QsVNLP3l6JKOPrQKUAt0P7/1VbZ7jHhLOj5taGINnty",
+    "EnrolledSubjects": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "test-student",
+    "Username": "test-student",
+    "Password": "$2a$11$a3Q1lT.FUX93VuB8rL0fvupLc/mOqqtwlMLTTuGmXEGJYpqawtuom",
+    "EnrolledSubjects": [
+      1,
+      4
+    ]
+  }
+]

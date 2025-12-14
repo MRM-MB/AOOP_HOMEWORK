@@ -1,0 +1,107 @@
+[
+  {
+    "Id": 2,
+    "Name": "Object Oriented Programming",
+    "Description": "Object-oriented programming (OOP) is a programming paradigm based on the concept of \"objects\", which can contain data, in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). \n\nTeacher: Magnus L. Friis",
+    "TeacherId": 2,
+    "TeacherName": null
+  },
+  {
+    "Id": 5,
+    "Name": "Socio-Economic Studies",
+    "Description": "Socioeconomics (also known as social economics) is the social science that studies how economic activity affects and is shaped by social processes. In general it analyzes how modern societies progress, stagnate, or regress because of their local or regional economy, or the global economy.\n\nTeacher: Sofia Todeschini",
+    "TeacherId": 3,
+    "TeacherName": null
+  },
+  {
+    "Id": 6,
+    "Name": "History",
+    "Description": "History is the study of the past. Events occurring before the invention of writing systems are considered prehistory. \"History\" is an umbrella term that relates to past events as well as the memory, discovery, collection, organization, presentation, and interpretation of information about these events.\n\nTeacher: Roy H. Paisley",
+    "TeacherId": 4,
+    "TeacherName": null
+  },
+  {
+    "Id": 7,
+    "Name": "Business Studies",
+    "Description": "Business studies is an academic subject taught in schools and at university level in many countries. Its study combines elements of accountancy, finance, marketing, organizational studies, and economics.\n\nTeacher: Sofia Todeschini",
+    "TeacherId": 3,
+    "TeacherName": null
+  },
+  {
+    "Id": 8,
+    "Name": "Latin",
+    "Description": "Latin is a classical language belonging to the Italic branch of the Indo-European languages. Latin was originally spoken in the area around Rome, known as Latium.\n\nTeacher: Roy H. Paisley",
+    "TeacherId": 4,
+    "TeacherName": null
+  },
+  {
+    "Id": 9,
+    "Name": "Cyber Security",
+    "Description": "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These attacks are usually aimed at accessing, changing, or destroying sensitive information; extorting money from users; or interrupting normal business processes.\n\nTeacher: Huan Yue Kuo",
+    "TeacherId": 5,
+    "TeacherName": null
+  },
+  {
+    "Id": 1,
+    "Name": "Mathematics",
+    "Description": "Mathematics is the study of numbers, shapes and patterns. The word comes from the Greek word \"μάθημα\" (máthema), meaning \"science, knowledge, or learning\", and is sometimes shortened to maths! \n\nTeacher: Marcel Schrder",
+    "TeacherId": 1,
+    "TeacherName": null
+  },
+  {
+    "Id": 3,
+    "Name": "Physics",
+    "Description": "Physics is the natural science that studies matter, its motion and behavior through space and time, and the related entities of energy and force. \n\nTeacher: Marcel Schrder",
+    "TeacherId": 1,
+    "TeacherName": null
+  },
+  {
+    "Id": 4,
+    "Name": "Computer Systems",
+    "Description": "A computer system is a set of integrated devices that input, output, process, and store data and information. Computer systems are currently built around at least one digital processing device.\n\nTeacher: Magnus L. Friis",
+    "TeacherId": 1,
+    "TeacherName": null
+  },
+  {
+    "Id": 10,
+    "Name": "Philosophy",
+    "Description": "Philosophy is the study of general and fundamental questions, such as those about existence, reason, knowledge, values, mind, and language. Such questions are often posed as problems to be studied or resolved.\n\nTeacher: Luigi",
+    "TeacherId": 6,
+    "TeacherName": null
+  },
+  {
+    "Id": 11,
+    "Name": "Origami",
+    "Description": "Just some fun all around!!\n\nTeacher: manish",
+    "TeacherId": 6,
+    "TeacherName": null
+  },
+  {
+    "Id": 12,
+    "Name": "Paper planes",
+    "Description": "Just some good all fun!\n\nTeacher: Jhon",
+    "TeacherId": 8,
+    "TeacherName": null
+  },
+  {
+    "Id": 13,
+    "Name": "Lego Building 101",
+    "Description": "The title says it all 🥇🥇🥇\n\nTeacher: Walker",
+    "TeacherId": 9,
+    "TeacherName": null
+  },
+  {
+    "Id": 14,
+    "Name": "🎥 Movie class",
+    "Description": "Watch a movie over the weekend and tell me all about it on Thursday! Once we've shared all our movies, we'll create a ranking and put together a recommendation tier list based on their genres. At the end of the semester, we'll share it with a few people as a curated watchlist!\n\nTeacher: Walker",
+    "TeacherId": 9,
+    "TeacherName": null
+  },
+  {
+    "Id": 15,
+    "Name": "🕸️ Webs 403 ",
+    "Description": "Come and learn from the best how to create ultra-strong tensile spider webs for everyone!\n\nTeacher: Peter Parker",
+    "TeacherId": 10,
+    "TeacherName": null
+  }
+]

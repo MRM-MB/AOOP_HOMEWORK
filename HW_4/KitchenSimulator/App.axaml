@@ -1,0 +1,25 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="KitchenSimulator.App"
+             xmlns:local="using:KitchenSimulator"
+             RequestedThemeVariant="Light">
+
+  <Application.DataTemplates>
+    <local:ViewLocator/>
+  </Application.DataTemplates>
+
+  <Application.Styles>
+    <FluentTheme />
+
+    <Style Selector="ProgressBar.animated-progress">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Property="Value"
+                            Duration="0:0:0.3"
+                            Easing="CubicEaseInOut"/>
+        </Transitions>
+      </Setter>
+    </Style>
+
+  </Application.Styles>
+</Application>

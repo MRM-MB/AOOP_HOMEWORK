@@ -1,0 +1,147 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:UniversityManagementApp.ViewModels"
+        x:Class="UniversityManagementApp.Views.TeacherDashboard"
+        x:DataType="vm:TeacherDashboardViewModel"
+        Icon="/Assets/Logo.png"
+        Title="Teacher Dashboard"
+        Width="800"
+        Height="775">
+
+    <TabControl SelectedIndex="{Binding SelectedTabIndex}">
+        <!-- Homepage Tab -->
+        <TabItem Header="🏠 Homepage" VerticalContentAlignment="Center">
+            <StackPanel Margin="10">
+                <Border Margin="10" Padding="10" Background="LightBlue" CornerRadius="15">
+                    <TextBlock Name="TeacherNameText" 
+                             FontSize="30" 
+                             FontWeight="Bold" 
+                             Foreground="Black" 
+                             HorizontalAlignment="Center"
+                             Text="Welcome to the University Management App! 🎓" />
+                </Border>
+                
+                <TextBlock FontSize="24" FontStyle="Italic" Margin="5,10,5,1" Text="Dear Teacher," />
+                <TextBlock FontSize="18" TextWrapping="Wrap" Margin="5,3,5,5"
+                           Text="Welcome to your teacher dashboard! Here you can manage your subjects and create new courses for students." />
+
+                <Separator Margin="0,10"/>
+
+                <TextBlock FontSize="22" FontWeight="Bold" Margin="5,5,5,3" Text="Navigation Guide:" />
+                <TextBlock FontSize="18" Margin="5,0,5,1" TextWrapping="Wrap"
+                           Text="- 🏠 Home: Current page - your main dashboard overview" />
+                <TextBlock FontSize="18" Margin="5,0,5,1" TextWrapping="Wrap"
+                           Text="- 📚 My Subjects: Manage your subjects, create new ones, and view/edit descriptions" />
+            </StackPanel>
+        </TabItem>
+
+        <!-- My Subjects Tab -->
+        <TabItem Header="📚 My Subjects">
+            <StackPanel>
+                <TextBlock FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"
+                           Text="Your Subjects" Margin="0,10,0,5"/>
+                <Separator Margin="10"/>
+                <TextBlock FontSize="18" TextWrapping="Wrap" Margin="10"
+                           Text="Here you can manage your subjects. Create new ones or modify existing courses." />
+
+                <Grid ColumnDefinitions="2*, 3*" RowDefinitions="Auto, *" Margin="10">
+                    <!-- Subjects list -->
+                    <Border Grid.Column="0" BorderThickness="2" BorderBrush="DarkBlue" CornerRadius="10"
+                            Margin="0,0,5,0" Padding="5" Background="AliceBlue">
+                        <StackPanel>
+                            <TextBlock Text="Your Subject List:" FontWeight="Bold" Margin="5"/>
+                            <ListBox x:Name="SubjectsListBox" 
+                                    ItemsSource="{Binding Subjects}" 
+                                    SelectedItem="{Binding SelectedSubject}" 
+                                    Height="200">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Name}" />
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Selected Subject Description -->
+                    <Border Grid.Column="1" BorderThickness="2" BorderBrush="DarkGray" CornerRadius="10"
+                            Margin="5,0,0,0" Padding="10" Background="White">
+                        <StackPanel>
+                            <TextBlock Text="Subject Description:" FontSize="20" FontWeight="Bold"/>
+                            <StackPanel>
+                                <TextBlock Text="{Binding SelectedDescription}" 
+                                         FontSize="16"
+                                         TextWrapping="Wrap"
+                                         Height="170"/>
+                                <Separator Margin="0,5"/>
+                                <TextBlock Text="{Binding SelectedTeacherInfo}" 
+                                         FontSize="14"
+                                         FontStyle="Italic"
+                                         Foreground="DarkBlue"
+                                         Height="20"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Form to create a new subject -->
+                    <Border Grid.Row="1" Grid.ColumnSpan="2" 
+                            BorderThickness="2" 
+                            BorderBrush="DarkGreen" 
+                            CornerRadius="10"
+                            Margin="0,10,0,0" 
+                            Padding="10" 
+                            Background="Honeydew">
+                        <StackPanel>
+                            <TextBlock Text="{Binding EditingTitle}" 
+                                     FontSize="20" 
+                                     FontWeight="Bold" 
+                                     Margin="0,0,0,10"/>
+
+                            <TextBlock Text="Subject Name:" 
+                                     FontWeight="Bold" 
+                                     Margin="0,5"/>
+                            <TextBox Text="{Binding NewSubjectName}" 
+                                    Watermark="Enter subject name..." 
+                                    Margin="0,0,0,10"/>
+
+                            <TextBlock Text="Subject Description:" 
+                                     FontWeight="Bold" 
+                                     Margin="0,5"/>
+                            <TextBox Text="{Binding NewSubjectDescription}" 
+                                    Height="100"
+                                    TextWrapping="Wrap"
+                                    AcceptsReturn="True"
+                                    Watermark="Enter subject description..." 
+                                    Margin="0,0,0,10"/>
+
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Button Content="{Binding SaveButtonText}"
+                                        Command="{Binding SaveSubjectCommand}"
+                                        Padding="20,10"
+                                        Background="ForestGreen"
+                                        Foreground="White"/>
+                                        
+                                <Button Content="❌ Delete Subject"
+                                        Command="{Binding DeleteSubjectCommand}"
+                                        IsEnabled="{Binding SelectedSubject, Converter={x:Static ObjectConverters.IsNotNull}}"
+                                        Padding="20,10"
+                                        Background="Crimson"
+                                        Foreground="White"/>
+
+                                <Button Content="🔚 Exit Subject"
+                                        Command="{Binding ClearFormCommand}"
+                                        Padding="20,10"
+                                        Background="Gray"
+                                        Foreground="White"/>
+                                        
+                                <TextBlock Text="{Binding ConfirmationMessage}" 
+                                         VerticalAlignment="Center"
+                                         FontWeight="Bold"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>

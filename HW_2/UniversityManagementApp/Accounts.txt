@@ -1,0 +1,21 @@
+===============================
+        Students Accounts       
+===============================
+
+1. Username: JoDoe        | Password: password123
+2. Username: MiSmi        | Password: Monday2025
+3. Username: LiJoh        | Password: Hello123
+
+===============================
+        Teacher Accounts       
+===============================
+
+1. Username: MaSch     | Password: password
+2. Username: MaFri     | Password: Monday
+3. Username: SoTod     | Password: Friday
+4. Username: RoPai     | Password: Saturday
+5. Username: HuKuo     | Password: Sunday
+6. Username: manish    | Password: Tuesday
+7. Username: Luigi     | Password: ciao2025!
+8. Username: Jhon      | Password: Hello2025
+9. Username: Walker    | Password: Baseball

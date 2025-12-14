@@ -1,0 +1,263 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DataVizApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
+        mc:Ignorable="d" 
+        Width="1800" Height="800"
+        x:Class="DataVizApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="DataVizApp">
+
+    <Design.DataContext>        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid RowDefinitions="Auto,Auto,Auto,*">
+        <TextBlock Grid.Row="0" Text="{Binding Greeting}" HorizontalAlignment="Center" Margin="0,10,0,10" FontSize="24"/>
+        
+        <!-- Chart Selector (added back) -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <TextBlock Text="Add Chart: " VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox Width="300" 
+                      ItemsSource="{Binding AvailableCharts}" 
+                      SelectedItem="{Binding SelectedChart}"/>
+            <Button Content="Add" 
+                    Margin="10,0,0,0"
+                    Padding="15,5"
+                    Command="{Binding ShowChartCommand}" 
+                    CommandParameter="{Binding SelectedChart}"
+                    IsEnabled="{Binding !!SelectedChart}"/>
+        </StackPanel>
+        
+        <!-- Top Items Control -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <TextBlock Text="Number of items to display: " VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <NumericUpDown Value="{Binding TopItemsToDisplay, Mode=TwoWay}" 
+                          Minimum="3" 
+                          Maximum="15" 
+                          Increment="1"
+                          Width="100"
+                          ValueChanged="NumericUpDown_ValueChanged"
+                          VerticalAlignment="Center"/>
+            <Border Background="#FFF8E0" BorderBrush="#FFD700" BorderThickness="1" CornerRadius="3" Margin="10,0,0,0" Padding="8,4">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="⚠️ " FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBlock Text="For pie charts: Hover over to see changes take effect" 
+                              Foreground="#CC6600"
+                              FontStyle="Italic"
+                              VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        
+        <!-- Chart Container - Changed to handle dynamic positioning -->
+        <Grid Grid.Row="3" ColumnDefinitions="*,*,*" RowDefinitions="*,*">
+            <!-- Empty State Message - shown when no charts are available -->
+            <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" BorderBrush="Gray" BorderThickness="1" Margin="10"
+                   IsVisible="{Binding ShowEmptyState}">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="No Chart Available" 
+                              HorizontalAlignment="Center" 
+                              FontSize="24"
+                              Margin="0,0,0,20"/>
+                    <TextBlock Text="All charts have been removed. Use the dropdown menu above to add charts back." 
+                              HorizontalAlignment="Center"
+                              TextWrapping="Wrap"
+                              Width="400"
+                              TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            
+            <!-- Top Platforms Chart -->
+            <Border Grid.Row="{Binding TopPlatformsRow}" 
+                    Grid.Column="{Binding TopPlatformsColumn}"
+                    Grid.RowSpan="{Binding TopPlatformsRowSpan}"
+                    Grid.ColumnSpan="{Binding TopPlatformsColumnSpan}"
+                    BorderBrush="Gray" BorderThickness="1" Margin="5"
+                    IsVisible="{Binding ShowPlatformsChart}">
+                <Grid RowDefinitions="Auto,*">
+                    <Grid Grid.Row="0" ColumnDefinitions="*,Auto">
+                        <TextBlock Grid.Column="0" Text="Top Streaming Platforms by Usage" 
+                                  HorizontalAlignment="Center" Margin="0,5,0,5" FontWeight="Bold"/>
+                        <Button Grid.Column="1" Content="Remove" 
+                                Width="80"
+                                Height="30"
+                                Padding="8,3"
+                                FontSize="14"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Margin="5,0,5,0"
+                                Command="{Binding RemoveChartCommand}" 
+                                CommandParameter="TopPlatforms"
+                                Foreground="Red"
+                                FontWeight="Bold"/>
+                    </Grid>
+                    <lvc:CartesianChart Grid.Row="1" Series="{Binding TopPlatformsSeries}" 
+                                       XAxes="{Binding TopPlatformsXAxes}"
+                                       YAxes="{Binding TopPlatformsYAxes}"
+                                       LegendPosition="Right"
+                                       TooltipPosition="Top"
+                                       ZoomMode="X"
+                                       AnimationsSpeed="00:00:00.300"
+                                       Margin="10,5,10,10"/>
+                </Grid>
+            </Border>
+            
+            <!-- Genre Pie Chart -->
+            <Border Grid.Row="{Binding GenrePieRow}" 
+                    Grid.Column="{Binding GenrePieColumn}"
+                    Grid.RowSpan="{Binding GenrePieRowSpan}"
+                    Grid.ColumnSpan="{Binding GenrePieColumnSpan}"
+                    BorderBrush="Gray" BorderThickness="1" Margin="5"
+                    IsVisible="{Binding ShowGenrePieChart}">
+                <Grid RowDefinitions="Auto,*">
+                    <Grid Grid.Row="0" ColumnDefinitions="*,Auto">
+                        <TextBlock Grid.Column="0" Text="Most Streamed Music Genres" 
+                                  HorizontalAlignment="Center" Margin="0,5,0,5" FontWeight="Bold"/>
+                        <Button Grid.Column="1" Content="Remove" 
+                                Width="80"
+                                Height="30"
+                                Padding="8,3"
+                                FontSize="14"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Margin="5,0,5,0"
+                                Command="{Binding RemoveChartCommand}" 
+                                CommandParameter="GenrePie"
+                                Foreground="Red"
+                                FontWeight="Bold"/>
+                    </Grid>
+                    <lvc:PieChart Grid.Row="1" 
+                                 Series="{Binding GenrePieSeries, Mode=OneWay}"
+                                 LegendPosition="Right" 
+                                 InitialRotation="-90"
+                                 AnimationsSpeed="00:00:01.200"
+                                 x:Name="GenrePieChart"
+                                 Margin="10,5,10,10">
+                        <!-- Force chart to update when series changes -->
+                        <lvc:PieChart.Transitions>
+                            <Transitions>
+                                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.01"/>
+                            </Transitions>
+                        </lvc:PieChart.Transitions>
+                    </lvc:PieChart>
+                </Grid>
+            </Border>
+            
+            <!-- Subscription Type Pie Chart -->
+            <Border Grid.Row="{Binding SubscriptionTypePieRow}" 
+                    Grid.Column="{Binding SubscriptionTypePieColumn}"
+                    Grid.RowSpan="{Binding SubscriptionTypePieRowSpan}"
+                    Grid.ColumnSpan="{Binding SubscriptionTypePieColumnSpan}"
+                    BorderBrush="Gray" BorderThickness="1" Margin="5"
+                    IsVisible="{Binding ShowSubscriptionTypePieChart}">
+                <Grid RowDefinitions="Auto,*">
+                    <Grid Grid.Row="0" ColumnDefinitions="*,Auto">
+                        <TextBlock Grid.Column="0" Text="Subscription Types Distribution" 
+                                  HorizontalAlignment="Center" Margin="0,5,0,5" FontWeight="Bold"/>
+                        <Button Grid.Column="1" Content="Remove" 
+                                Width="80"
+                                Height="30"
+                                Padding="8,3"
+                                FontSize="14"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Margin="5,0,5,0"
+                                Command="{Binding RemoveChartCommand}" 
+                                CommandParameter="SubscriptionTypePie"
+                                Foreground="Red"
+                                FontWeight="Bold"/>
+                    </Grid>
+                    <lvc:PieChart Grid.Row="1" 
+                                 Series="{Binding SubscriptionTypePieSeries, Mode=OneWay}"
+                                 LegendPosition="Right" 
+                                 InitialRotation="-90"
+                                 AnimationsSpeed="00:00:01.200"
+                                 x:Name="SubscriptionTypePieChart"
+                                 Margin="10,5,10,10">
+                        <!-- Force chart to update when series changes -->
+                        <lvc:PieChart.Transitions>
+                            <Transitions>
+                                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.01"/>
+                            </Transitions>
+                        </lvc:PieChart.Transitions>
+                    </lvc:PieChart>
+                </Grid>
+            </Border>
+
+            <!-- Minutes Streamed per day by Age Chart -->
+            <Border Grid.Row="{Binding AgeGroupStreamingRow}" 
+                    Grid.Column="{Binding AgeGroupStreamingColumn}"
+                    Grid.RowSpan="{Binding AgeGroupStreamingRowSpan}"
+                    Grid.ColumnSpan="{Binding AgeGroupStreamingColumnSpan}"
+                    BorderBrush="Gray" BorderThickness="1" Margin="5"
+                    IsVisible="{Binding ShowAverageMinutesStreamedByAgeGroupChart}">
+                <Grid RowDefinitions="Auto,*">
+                    <Grid Grid.Row="0" ColumnDefinitions="*,Auto">
+                        <TextBlock Grid.Column="0" Text="Minutes Streamed per day by Age" 
+                                  HorizontalAlignment="Center" Margin="0,5,0,5" FontWeight="Bold"/>
+                        <Button Grid.Column="1" Content="Remove" 
+                                Width="80"
+                                Height="30"
+                                Padding="8,3"
+                                FontSize="14"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Margin="5,0,5,0"
+                                Command="{Binding RemoveChartCommand}" 
+                                CommandParameter="AgeGroupStreaming"
+                                Foreground="Red"
+                                FontWeight="Bold"/>
+                    </Grid>
+                    <lvc:CartesianChart Grid.Row="1" Series="{Binding AgeGroupStreamingSeries}" 
+                                       XAxes="{Binding AgeGroupXAxes}"
+                                       YAxes="{Binding AgeGroupYAxes}"
+                                       LegendPosition="Right"
+                                       TooltipPosition="Top"
+                                       ZoomMode="X"
+                                       AnimationsSpeed="00:00:00.300"
+                                       Margin="10,5,10,10"/>
+                </Grid>
+            </Border>
+            
+            <!-- Top Artists by Listeners Chart -->
+            <Border Grid.Row="{Binding TopArtistsRow}" 
+                    Grid.Column="{Binding TopArtistsColumn}"
+                    Grid.RowSpan="{Binding TopArtistsRowSpan}"
+                    Grid.ColumnSpan="{Binding TopArtistsColumnSpan}"
+                    BorderBrush="Gray" BorderThickness="1" Margin="5"
+                    IsVisible="{Binding ShowTopArtistsChart}">
+                <Grid RowDefinitions="Auto,*">
+                    <Grid Grid.Row="0" ColumnDefinitions="*,Auto">
+                        <TextBlock Grid.Column="0" Text="Top Artists by Listeners" 
+                                  HorizontalAlignment="Center" Margin="0,5,0,5" FontWeight="Bold"/>
+                        <Button Grid.Column="1" Content="Remove" 
+                                Width="80"
+                                Height="30"
+                                Padding="8,3"
+                                FontSize="14"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Margin="5,0,5,0"
+                                Command="{Binding RemoveChartCommand}" 
+                                CommandParameter="TopArtists"
+                                Foreground="Red"
+                                FontWeight="Bold"/>
+                    </Grid>
+                    <lvc:CartesianChart Grid.Row="1" Series="{Binding TopArtistsSeries}" 
+                                       XAxes="{Binding TopArtistsXAxes}"
+                                       YAxes="{Binding TopArtistsYAxes}"
+                                       LegendPosition="Right"
+                                       TooltipPosition="Top"
+                                       ZoomMode="X"
+                                       AnimationsSpeed="00:00:00.300"
+                                       Margin="10,5,10,10"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

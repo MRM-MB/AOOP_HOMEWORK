@@ -1,0 +1,119 @@
+{
+    "ingredients": [
+      { "name": "Tomato", "quantity": "10", "unit": "pcs" },
+      { "name": "Onion", "quantity": "5", "unit": "pcs" },
+      { "name": "Cheese", "quantity": "500", "unit": "grams" },
+      { "name": "Basil", "quantity": "15", "unit": "leaves" },
+      { "name": "Pasta", "quantity": "1", "unit": "kg" },
+      { "name": "Chicken Breast", "quantity": "4", "unit": "pcs" },
+      { "name": "Beef Steak", "quantity": "3", "unit": "pcs" },
+      { "name": "Mushroom", "quantity": "200", "unit": "grams" },
+      { "name": "Garlic", "quantity": "10", "unit": "cloves" },
+      { "name": "Olive Oil", "quantity": "500", "unit": "ml" },
+      { "name": "Butter", "quantity": "200", "unit": "grams" },
+      { "name": "Flour", "quantity": "1", "unit": "kg" },
+      { "name": "Eggs", "quantity": "12", "unit": "pcs" },
+      { "name": "Milk", "quantity": "2", "unit": "liters" },
+      { "name": "Salt", "quantity": "500", "unit": "grams" },
+      { "name": "Pepper", "quantity": "200", "unit": "grams" }
+    ],
+    "recipes": [
+      {
+        "name": "Margherita Pizza",
+        "difficulty": "Medium",
+        "equipment": ["Oven", "Rolling Pin", "Mixing Bowl"],
+        "steps": [
+          { "step": "Preheat the oven", "duration": 5 },
+          { "step": "Prepare the dough", "duration": 15 },
+          { "step": "Spread tomato sauce", "duration": 5 },
+          { "step": "Add cheese and basil", "duration": 3 },
+          { "step": "Bake the pizza", "duration": 15 }
+        ]
+      },
+      {
+        "name": "Pasta Pomodoro",
+        "difficulty": "Easy",
+        "equipment": ["Stove", "Saucepan", "Colander"],
+        "steps": [
+          { "step": "Boil water", "duration": 5 },
+          { "step": "Cook pasta", "duration": 10 },
+          { "step": "Prepare tomato sauce", "duration": 8 },
+          { "step": "Mix pasta and sauce", "duration": 2 }
+        ]
+      },
+      {
+        "name": "Grilled Chicken with Garlic Butter",
+        "difficulty": "Medium",
+        "equipment": ["Grill", "Bowl", "Brush"],
+        "steps": [
+          { "step": "Marinate the chicken", "duration": 30 },
+          { "step": "Preheat the grill", "duration": 10 },
+          { "step": "Grill the chicken", "duration": 20 },
+          { "step": "Prepare garlic butter sauce", "duration": 5 },
+          { "step": "Brush garlic butter on chicken", "duration": 2 }
+        ]
+      },
+      {
+        "name": "Beef Stroganoff",
+        "difficulty": "Hard",
+        "equipment": ["Stove", "Frying Pan", "Wooden Spoon"],
+        "steps": [
+          { "step": "Slice beef into strips", "duration": 10 },
+          { "step": "Saute onions and mushrooms", "duration": 5 },
+          { "step": "Add beef and sear", "duration": 10 },
+          { "step": "Prepare sauce with sour cream", "duration": 5 },
+          { "step": "Simmer for flavors to develop", "duration": 10 }
+        ]
+      },
+      {
+        "name": "Chocolate Pancakes",
+        "difficulty": "Easy",
+        "equipment": ["Mixing Bowl", "Whisk", "Frying Pan"],
+        "steps": [
+          { "step": "Mix dry ingredients", "duration": 5 },
+          { "step": "Add milk and eggs", "duration": 3 },
+          { "step": "Whisk until smooth", "duration": 3 },
+          { "step": "Cook pancakes on frying pan", "duration": 10 },
+          { "step": "Serve with toppings", "duration": 2 }
+        ]
+      },
+      {
+        "name": "Seafood Paella",
+        "difficulty": "Hard",
+        "equipment": ["Stove", "Large Pan", "Spatula"],
+        "steps": [
+          { "step": "Prepare seafood and chop vegetables", "duration": 10 },
+          { "step": "Sauté onions, garlic, and bell peppers", "duration": 5 },
+          { "step": "Add rice and spices", "duration": 5 },
+          { "step": "Pour in broth and simmer", "duration": 20 },
+          { "step": "Add seafood and cook until done", "duration": 10 },
+          { "step": "Garnish with lemon and parsley", "duration": 2 }
+        ]
+      },
+      {
+        "name": "Vegetable Stir Fry",
+        "difficulty": "Easy",
+        "equipment": ["Wok", "Knife", "Cutting Board"],
+        "steps": [
+          { "step": "Chop assorted vegetables", "duration": 5 },
+          { "step": "Heat wok and add oil", "duration": 2 },
+          { "step": "Stir-fry vegetables over high heat", "duration": 7 },
+          { "step": "Add soy sauce and seasonings", "duration": 3 },
+          { "step": "Toss and serve immediately", "duration": 1 }
+        ]
+      },
+      {
+        "name": "Lamb Curry",
+        "difficulty": "Hard",
+        "equipment": ["Pot", "Spice Grinder", "Knife"],
+        "steps": [
+          { "step": "Marinate lamb with spices", "duration": 20 },
+          { "step": "Brown lamb in a pot", "duration": 10 },
+          { "step": "Grind spices and sauté onions", "duration": 5 },
+          { "step": "Add lamb, tomatoes, and coconut milk", "duration": 5 },
+          { "step": "Simmer until lamb is tender", "duration": 25 },
+          { "step": "Finish with fresh cilantro", "duration": 2 }
+        ]
+      }
+    ]
+  }

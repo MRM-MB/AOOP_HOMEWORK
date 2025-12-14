@@ -1,0 +1,88 @@
+[
+  {
+    "Id": 1,
+    "Name": "Marcel Schrder",
+    "Username": "MaSch",
+    "Password": "$2a$11$.BGkUYJ4kGc8EbPmZP9uD.5gEnicEw2EPR4LLYD./3hjEiX/RRR4u",
+    "Subjects": [
+      1,
+      3
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Magnus L. Friis",
+    "Username": "MaFri",
+    "Password": "$2a$11$8Fm9eTFLT5NZwPGM/SX7qOr5hrsOwxMsPzf5CTIkZW.qiweRLBVpi",
+    "Subjects": [
+      2,
+      4
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Sofia Todeschini",
+    "Username": "SoTod",
+    "Password": "$2a$11$sF740y1R4HV44sr7BhO8ZuUnvbVKMQYPvSqXfAcrjsOuVj49j2Tx6",
+    "Subjects": [
+      5,
+      7
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "Roy H. Paisley",
+    "Username": "RoPai",
+    "Password": "$2a$11$uHTMkWRQ48iOSLC82IWKy.Qdtariwighx7gTUp1U2ktNn6A.QXwLa",
+    "Subjects": [
+      6,
+      8
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "Huan Yue Kuo",
+    "Username": "HuKuo",
+    "Password": "$2a$11$3guCg/htBDmRLgHENtFwtOb5QNCylhOgnS7ZJnHFUqFp6kuLdw202",
+    "Subjects": [
+      9
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "manish",
+    "Username": "manish",
+    "Password": "$2a$11$WBU/cQVfzhkFYSXbhQgi6eaPx9IThuA6AJooexi07FqS.LKT3nxT6",
+    "Subjects": [
+      11
+    ]
+  },
+  {
+    "Id": 7,
+    "Name": "Luigi",
+    "Username": "Luigi",
+    "Password": "$2a$11$mWGoC2XSNQCFsUDcuyzYcuPV8U/erOBvRyj8EINbFul/8pXfyMeZe",
+    "Subjects": [
+      10
+    ]
+  },
+  {
+    "Id": 8,
+    "Name": "Jhon",
+    "Username": "Jhon",
+    "Password": "$2a$11$I5/2JrfVMTcazAUgNRwfQusGCfkGdUbv4Ik7UBNKMiq7c/tcWBVjG",
+    "Subjects": [
+      12
+    ]
+  },
+  {
+    "Id": 9,
+    "Name": "Walker",
+    "Username": "Walker",
+    "Password": "$2a$11$cXeD/CdcrhfDC0SiuVeluOfRrI/jMieAkECyjG1nSL6iacG3przTe",
+    "Subjects": [
+      13,
+      14
+    ]
+  }
+]
