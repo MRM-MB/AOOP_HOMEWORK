@@ -1,5 +1,7 @@
 # Homework 3 - Data Visualization App
 
+![App Screenshot](../Screenshots/Assignment3.webp)
+
 ## 📌 Assignment Overview
 
 The purpose of this assignment is to develop a **fully functional data visualization application** that allows users to load, process, and analyze datasets using interactive graphs. The project emphasizes software architecture best practices and usability.
@@ -16,7 +18,7 @@ The purpose of this assignment is to develop a **fully functional data visualiza
 
 Below is the initial **UI sketch/mock-up** designed for the application. It helped in planning the layout and user experience before development.
 
-![UI Mock-up](../Screenshots/Assignment3.webp)
+![UI Mock-up](../Screenshots/Mockup3.png)
 
 ## 🎯 Features Implemented
 
