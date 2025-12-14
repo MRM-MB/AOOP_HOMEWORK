@@ -3,7 +3,7 @@
 **⚠️ Note for the Professor:**
 We have included a sample file, `Accounts.txt`, in `/UniversityManagementApp` for you to test the program. You can log in using premade accounts from this file or create a new user using the "Sign Up" feature to explore the application.
 
-![LOG-IN_UI](./Screenshots/README_1.png)
+![LOG-IN_UI](../Screenshots/Assignment2.webp)
 
 ## 📌 Assignment Overview
 

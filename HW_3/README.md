@@ -16,7 +16,7 @@ The purpose of this assignment is to develop a **fully functional data visualiza
 
 Below is the initial **UI sketch/mock-up** designed for the application. It helped in planning the layout and user experience before development.
 
-![UI Mock-up](./Screenshots/Readme1.png)
+![UI Mock-up](../Screenshots/Assignment3.webp)
 
 ## 🎯 Features Implemented
 
