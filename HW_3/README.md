@@ -2,7 +2,7 @@
 
 ![App Screenshot](../Screenshots/Assignment3.webp)
 
-## 📌 Assignment Overview
+## Assignment Overview
 
 The purpose of this assignment is to develop a **fully functional data visualization application** that allows users to load, process, and analyze datasets using interactive graphs. The project emphasizes software architecture best practices and usability.
 
@@ -14,13 +14,13 @@ The purpose of this assignment is to develop a **fully functional data visualiza
 - Minutes Streamed per Day by Age
 - Top Artists by Listeners
 
-## 📐 UI Mock-up
+## UI Mock-up
 
 Below is the initial **UI sketch/mock-up** designed for the application. It helped in planning the layout and user experience before development.
 
 ![UI Mock-up](../Screenshots/Mockup3.png)
 
-## 🎯 Features Implemented
+## Features Implemented
 
 ### **Basic Features:**
 
@@ -61,20 +61,20 @@ Both team members contributed to the overall application architecture, UI design
 ## 📁 Project Structure
 
 ```plaintext
-📦 Data Visualization App
-├── 📁 Models       # Data models and dataset representations
-├── 📁 ViewModels   # MVVM ViewModels for managing UI logic
-├── 📁 Views        # UI components built with Avalonia
-├── 📁 Assets    # Static resources such as icons, mock-up images, styles, and themes
-├── 📁 Data         # Example CSV datasets
-├── 📄 Program.cs   # Main entry point of the application
-├── 📄 App.axaml    # Application-level UI structure
-└── 📄 README.md    # Project documentation
+Data Visualization App
+├── Models       # Data models and dataset representations
+├── ViewModels   # MVVM ViewModels for managing UI logic
+├── Views        # UI components built with Avalonia
+├── Assets    # Static resources such as icons, mock-up images, styles, and themes
+├── Data         # Example CSV datasets
+├── Program.cs   # Main entry point of the application
+├── App.axaml    # Application-level UI structure
+└── README.md    # Project documentation
 ```
 
 ---
 
-## 🚀 **How to Run**
+## **How to Run**
 
 1. Open the project in an IDE that supports C# and Avalonia.
 
