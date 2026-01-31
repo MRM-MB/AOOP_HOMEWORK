@@ -6,11 +6,11 @@ You can also upload a custom `.b2img.txt` file to check how the application proc
 
 ![App Screenshot](../Screenshots/Assignment1.webp)
 
-## 📌 Assignment Overview
+## Assignment Overview
 
 This assignment involves creating an application that reads `.b2img.txt` files, loads them into memory, displays and modifies the values using a graphical user interface, and writes the modified data to an output file. The application was developed using the Avalonia framework to handle the GUI.
 
-## 🎯 Features Implemented
+## Features Implemented
 
 - **File Handling:** Load `.b2img.txt` files and parse their content.
 - **Graphical User Interface (GUI):** A user-friendly interface to display and edit the image.
@@ -62,7 +62,7 @@ IMAGEEDITORAPP/
 
 ---
 
-## 🚀 **How to Run**  
+## **How to Run**  
 
 1. Open the project in an IDE that supports C# and Avalonia.
 2. Run the project to launch the GUI.
