@@ -4,7 +4,7 @@
 
 This repository contains **four homework assignments** for the **Object-Oriented Programming (OOP) course - Semester 2**, completed by **Manish Raj Moriche and [Luigi Colluto](https://github.com/Lucol24)**.  
 
-## 📁 Projects Overview
+## Projects Overview
 
 | Project | Preview | Type | Framework | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -13,7 +13,7 @@ This repository contains **four homework assignments** for the **Object-Oriented
 | **Assignment 3** | [![DataVizApp](./Screenshots/Assignment3.webp)](./HW_3/README.md) | Avalonia Application | .NET 9.0 | A fully functional data visualization application that allows users to load, process, and analyze datasets using interactive graphs. |
 | **Assignment 4** | [![KitchenSimulator](./Screenshots/Assignment4.webp)](./HW_4/README.md) | Avalonia Application | .NET 9.0 | A restaurant kitchen simulator where multiple recipes are prepared concurrently, visualized with real-time animated feedback. |
 
-## 📁 Repository Structure  
+## Repository Structure  
 Each assignment is organized into its own folder. Inside each folder, you will find:  
 - 📂 **Project files** for the assignment.  
 - 📄 **README file**, which includes:  
