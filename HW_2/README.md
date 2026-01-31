@@ -5,11 +5,11 @@ We have included a sample file, `Accounts.txt`, in `/UniversityManagementApp` fo
 
 ![LOG-IN_UI](../Screenshots/Assignment2.webp)
 
-## 📌 Assignment Overview
+## Assignment Overview
 
 This assignment involves creating an application that manages university-related data, such as students, teachers, and subjects. The application allows users to log in, sign up, assign subjects to teachers and students, and edit or delete details. It was developed using the Avalonia framework for the graphical user interface.
 
-## 🎯 Features Implemented
+## Features Implemented
 
 - **User Authentication:**
   - Log in with username and password.
@@ -73,7 +73,7 @@ UniversityManagementAppTests/
 
 ---
 
-## 🚀 **How to Run**
+## **How to Run**
 
 1. Open the project in an IDE that supports C# and Avalonia.
 2. Run the project to launch the GUI `dotnet run --project /UniversityManagementApp/`.
@@ -82,7 +82,7 @@ UniversityManagementAppTests/
 
 ---
 
-## 🛠️ **Unit Testing**
+## **Unit Testing**
 
 Unit tests were created to verify the functionality of key features. Tests focus on:
 
