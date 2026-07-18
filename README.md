@@ -1,4 +1,4 @@
-# Advanced OOP Coursework Projects
+# Advanced OOP Coursework Projects 👨‍💻
 
 ![AOOP Logo](./Screenshots/aoopsdu.svg)
 
