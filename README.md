@@ -1,4 +1,4 @@
-# OOP Semester 2 - Homework Exercises  
+# Advanced OOP Coursework Projects
 
 ![AOOP Logo](./Screenshots/aoopsdu.svg)
 
